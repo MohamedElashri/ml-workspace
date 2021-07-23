@@ -714,14 +714,14 @@ RUN \
     # TODO: Not installed. Disable Jupyter Server Proxy
     # jupyter nbextension disable jupyter_server_proxy/tree --sys-prefix && \
     # Install jupyter black
-    jupyter nbextension install https://github.com/drillan/jupyter-black/archive/master.zip --sys-prefix && \
-    jupyter nbextension enable jupyter-black-master/jupyter-black --sys-prefix && \
+    #jupyter nbextension install https://github.com/drillan/jupyter-black/archive/master.zip --sys-prefix && \
+    #jupyter nbextension enable jupyter-black-master/jupyter-black --sys-prefix && \
     # If light flavor - exit here
-    if [ "$WORKSPACE_FLAVOR" = "light" ]; then \
-        # Cleanup
-        clean-layer.sh && \
-        exit 0 ; \
-    fi && \
+    #if [ "$WORKSPACE_FLAVOR" = "light" ]; then \
+     #   # Cleanup
+      #  clean-layer.sh && \
+       # exit 0 ; \
+    #fi && \
     # Install and activate what if tool
     pip install witwidget && \
     jupyter nbextension install --py --symlink --sys-prefix witwidget && \
